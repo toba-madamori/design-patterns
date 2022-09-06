@@ -6,3 +6,7 @@ export default class Logger{
         console.log(`${this.name} : ${message}`)
     }
 }
+
+export function custom(message) {
+    console.log('This is a custom logger with message :' + message)
+}
