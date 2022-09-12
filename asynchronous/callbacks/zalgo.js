@@ -21,6 +21,7 @@ const inconsistentRead = (filename, cb)=>{
 
 const createFileReader = (filename)=>{
     const listeners = []
+    console.log(listeners);
     inconsistentRead(filename, value =>{
         listeners.forEach(listener => listener(value))
     })
