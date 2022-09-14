@@ -16,5 +16,10 @@ const ticker = (number, cb)=>{
     return emitter
 }
 
-ticker(500, (err, count)=>console.log(`Total no of 50-milliseconds batches that occured is: ${count}`))
+ticker(500, (err, count)=>{
+    if(err){
+        console.error(err.message)
+        return
+    }
+    console.log(`Total no of 50-milliseconds batches that occured is: ${count}`)})
 .on('tick', (number)=>console.log(`a tick has happened, initial timer is at: ${number} milliseconds`))
