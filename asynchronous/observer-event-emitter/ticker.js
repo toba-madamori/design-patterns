@@ -44,5 +44,5 @@ ticker(500, (err, count)=>{
         return
     }
     console.log(`Total no of 50-milliseconds batches that occured is: ${count}`)})
-.on('tick', (number)=>console.log(`a tick has happened, initial timer is at: ${number} milliseconds`))
 .on('error', (err)=> console.error(err))
+.on('tick', (number)=>console.log(`a tick has happened, initial timer is at: ${number} milliseconds`))
