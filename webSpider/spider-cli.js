@@ -1,4 +1,4 @@
-import { spider } from "./v1.js"
+import { spider } from "./v2.js"
 
 spider(process.argv[2], (err, filename, downloaded)=>{
     if(err){
