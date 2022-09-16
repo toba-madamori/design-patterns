@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/toba-madamori/design-patterns/issues"
   },
-  "homepage": "https://github.com/toba-madamori/design-patterns#readme"
+  "homepage": "https://github.com/toba-madamori/design-patterns#readme",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "slug": "^8.0.0",
+    "superagent": "^8.0.0"
+  }
 }
