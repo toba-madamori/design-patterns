@@ -26,13 +26,19 @@ const download = (url, filename, cb)=>{
     })
 }
 
+
 export function spider (url, nesting, cb) {
+    const spidering = new Set()
     const filename = urlToFilename(url)
     fs.readFile(filename, 'utf-8', (err, fileContent) => {
         if(err){
             if(err.code !== 'ENOENT'){
                 return cb(err)
             }
+            if(spidering.has(url)){
+                return process.nextTick(cb)
+            }
+            spidering.add(url)
 
             return download(url, filename, (err, requestContent) => {
                 if (err) {
