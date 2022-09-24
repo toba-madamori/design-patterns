@@ -1,13 +1,13 @@
-import { spider } from "./v4.js"
+import { spider } from './v5.js'
+import { TaskQueue } from './taskQueue.js'
 
 const url = process.argv[2]
 const nesting = Number.parseInt(process.argv[3], 10) || 1
 
-spider(url, nesting, err => {
-    if (err) {
-        console.error(err)
-        process.exit(1)
-    }
+const concurrency = Number.parseInt(process.argv[4], 10) || 2
 
-    console.log('Download complete')
-})
+const spiderQueue = new TaskQueue(concurrency)
+spiderQueue.on('error', console.error)
+spiderQueue.on('empty', () => console.log('Download complete'))
+
+spider(url, nesting, spiderQueue)
