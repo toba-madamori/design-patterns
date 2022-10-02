@@ -1,4 +1,4 @@
-import { spider } from './spider.v6.js'
+import { spider } from './spider.v7.js'
 
 const url = process.argv[2]
 const nesting = Number.parseInt(process.argv[3], 10) || 1
