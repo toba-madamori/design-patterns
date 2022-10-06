@@ -14,3 +14,5 @@ const main = async () => {
 }
 
 main()
+
+// note this lacks proper error handling
