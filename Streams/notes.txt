@@ -1,0 +1,12 @@
+Base abstract classes available in the stream core module
+
+1. Readable (represents a source of data)
+2. Writable
+3. Duplex
+4. Transform
+
+Note: Each stream class is also an instance of eventEmitter.
+
+Operating modes: 
+1. Binary mode
+2. Object mode
