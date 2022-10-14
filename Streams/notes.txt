@@ -1,7 +1,7 @@
 Base abstract classes available in the stream core module
 
 1. Readable (represents a source of data)
-2. Writable
+2. Writable ( represents a data destination)
 3. Duplex
 4. Transform
 
