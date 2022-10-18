@@ -2,8 +2,10 @@ Base abstract classes available in the stream core module
 
 1. Readable (represents a source of data)
 2. Writable ( represents a data destination)
-3. Duplex
-4. Transform
+3. Duplex (a stream that is both readable and writable)
+4. Transform (special kind of duplex stream that is designed to handle data transformations, they apply some
+transformation to the data that they receive on their writable side and then make that data available on their readable
+side)
 
 Note: Each stream class is also an instance of eventEmitter.
 
